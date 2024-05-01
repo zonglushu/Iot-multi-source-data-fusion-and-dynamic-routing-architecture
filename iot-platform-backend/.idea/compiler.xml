@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lora" />
+        <module name="iot-common" />
+        <module name="iot-reception" />
+        <module name="iotapi-client-sdk" />
+        <module name="iot-decider" />
+        <module name="iot-gateway" />
+        <module name="iot-es" />
+        <module name="iot-usercenter" />
+        <module name="iot-bi" />
+        <module name="iot-paypal" />
+        <module name="iot-feign" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="iot-usercenter (1)" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="iot-bi" options="" />
+      <module name="iot-common" options="" />
+      <module name="iot-decider" options="" />
+      <module name="iot-es" options="" />
+      <module name="iot-feign" options="" />
+      <module name="iot-gateway" options="" />
+      <module name="iot-paypal" options="" />
+      <module name="iot-platform-backend" options="" />
+      <module name="iot-reception" options="" />
+      <module name="iot-usercenter" options="" />
+      <module name="iotapi-client-sdk" options="" />
+      <module name="lora" options="" />
+    </option>
+  </component>
+</project>

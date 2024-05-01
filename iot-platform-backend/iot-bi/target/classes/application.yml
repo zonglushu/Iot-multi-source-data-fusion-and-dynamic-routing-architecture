@@ -1,0 +1,25 @@
+spring:
+  main:
+    allow-circular-references: true
+  application:
+    name: iot-bi
+  # ?? dev ??
+  profiles:
+    active: dev
+  # ?? swagger3
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+server:
+  address: 0.0.0.0
+  port: 8200
+  servlet:
+    context-path: /api
+    # cookie 30 ???
+    session:
+      cookie:
+        max-age: 2592000
+yuapi:
+  client:
+    access-key: 3jb7j1myn9rfojf53jebv771u4far142
+    secret-key: yz6qqut9qv2vodcc2nccrcm8scvrco0y

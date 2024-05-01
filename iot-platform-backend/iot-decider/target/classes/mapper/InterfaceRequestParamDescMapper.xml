@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mayphyr.iotdecider.mapper.InterfaceRequestParamDescMapper">
+
+    <resultMap id="BaseResultMap" type="com.mayphyr.iotcommon.model.entity.InterfaceRequestParamDesc">
+        <result property="infaId" column="infa_id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="type" column="type" jdbcType="VARCHAR"/>
+        <result property="must" column="must" jdbcType="INTEGER"/>
+        <result property="example" column="example" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        infa_id,name,type,
+        must
+    </sql>
+</mapper>

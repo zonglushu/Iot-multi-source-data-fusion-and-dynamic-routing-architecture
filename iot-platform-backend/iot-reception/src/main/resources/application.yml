@@ -1,0 +1,21 @@
+spring:
+  main:
+    allow-circular-references: true  #??????
+  application:
+    name: iot-reception
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+server:
+  port: 8105
+  servlet:
+    context-path: /api
+
+
+mqtt:
+  broker-url: tcp://124.223.84.253:1883
+  client-id: PURE_SUN
+  username: PURE_SUN
+  password: 123456
+  web-topic: sms_pub
+  hard-topic: sms_sub

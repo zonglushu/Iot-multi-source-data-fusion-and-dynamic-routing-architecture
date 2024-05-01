@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mayphyr.iotdecider.mapper.InterfaceInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.mayphyr.iotcommon.model.entity.InterfaceInfo">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+        <result property="url" column="url" jdbcType="VARCHAR"/>
+        <result property="requestHeader" column="request_header" jdbcType="VARCHAR"/>
+        <result property="respnseHeader" column="respnse_header" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="method" column="method" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="founderId" column="founder_id" jdbcType="BIGINT"/>
+        <result property="host" column="host" jdbcType="VARCHAR"/>
+        <result property="requestParams" column="request_params" jdbcType="VARCHAR"/>
+        <result property="requestParamsRemark" column="request_params_remark" jdbcType="VARCHAR"/>
+        <result property="responseParamsRemark" column="response_params_remark" jdbcType="VARCHAR"/>
+        <result property="projectId" column="project_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,name,description,
+        url,request_header,respnse_header,
+        status,method,create_time,
+        update_time
+    </sql>
+
+<!--&lt;!&ndash;    动态创建interface_user_+userId表&ndash;&gt;-->
+<!--    <sql id="createTableSQL">-->
+<!--        CREATE TABLE IF NOT EXISTS ${tableName}-->
+<!--        (-->
+<!--            id-->
+<!--            INT-->
+<!--            PRIMARY-->
+<!--            KEY-->
+<!--            AUTO_INCREMENT,-->
+<!--            column1-->
+<!--            VARCHAR-->
+<!--        (-->
+<!--            255-->
+<!--        ),-->
+<!--            column2 INT-->
+<!--            )-->
+<!--    </sql>-->
+<!--&lt;!&ndash;     将 interface_user_+ interfaceId作为表名，并将结果传给 tableName变量，&ndash;&gt;-->
+<!--&lt;!&ndash;     然后又因为，在创建表的sql中，又一个变量是tableName，而我们这刚好又一个tableName的变量&ndash;&gt;-->
+<!--&lt;!&ndash;     所以就直接匹配上了&ndash;&gt;-->
+<!--    <insert id="createStuTable">-->
+<!--        <selectKey keyProperty="tableName" resultType="java.lang.String">-->
+<!--            SELECT CONCAT('interface_user_', #{interfaceId}) AS tableName-->
+<!--        </selectKey>-->
+<!--        ${createTableSQL}-->
+<!--    </insert>-->
+
+
+
+
+</mapper>

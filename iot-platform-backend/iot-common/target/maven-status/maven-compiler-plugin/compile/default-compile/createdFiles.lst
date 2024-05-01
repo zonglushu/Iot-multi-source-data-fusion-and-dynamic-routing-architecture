@@ -1,0 +1,5 @@
+com/mayphyr/iotcommon/enums/MQTT/MQTTAddress.class
+com/mayphyr/iotcommon/enums/MQTT/QosEnum.class
+com/mayphyr/iotcommon/enums/MQTT/MQTTResultStatus.class
+com/mayphyr/iotcommon/enums/MQTT/MQTTCommand.class
+com/mayphyr/iotcommon/enums/MQTT/MQTTReqType.class

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/iot-usercenter/pom.xml" />
+        <option value="$PROJECT_DIR$/iot-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/iot-decider/pom.xml" />
+        <option value="$PROJECT_DIR$/iot-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/iot-common/pom.xml" />
+        <option value="$PROJECT_DIR$/iot-bi/pom.xml" />
+        <option value="$PROJECT_DIR$/iot-paypal/pom.xml" />
+        <option value="$PROJECT_DIR$/iot-es/pom.xml" />
+        <option value="$PROJECT_DIR$/iot-reception/pom.xml" />
+        <option value="$PROJECT_DIR$/iotapi-client-sdk/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

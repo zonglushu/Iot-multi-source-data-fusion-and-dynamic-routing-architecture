@@ -1,0 +1,3 @@
+
+# spring boot starter
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.mayphyr.iotapiclientsdk.config.SunApiClientConfig

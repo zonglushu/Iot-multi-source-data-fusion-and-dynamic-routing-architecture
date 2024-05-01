@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiancai.lora.mapper.DataMapper">
+
+    <resultMap id="BaseResultMap" type="com.xiancai.lora.model.entity.DataS">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="sensorId" column="sensor_id" jdbcType="INTEGER"/>
+            <result property="dataType" column="data_type" jdbcType="VARCHAR"/>
+            <result property="data" column="data" jdbcType="VARCHAR"/>
+            <result property="dataTime" column="data_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,sensor_id,data_type,
+        data,data_time
+    </sql>
+    <select id="getLatestData" resultType="com.xiancai.lora.model.entity.DataS">
+        select * from data where sensor_id=#{sensorId} and data_type=#{dataType}  order by data_time desc  limit 1;
+    </select>
+
+</mapper>

@@ -1,0 +1,115 @@
+spring:
+  main:
+    allow-circular-references: true
+  application:
+    name: iot-decider
+  rabbitmq:
+    host: 124.221.8.81
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+    listener:
+      simple:
+        acknowledge-mode: auto
+        retry:
+          enabled: true
+          initial-interval: 1000 # 初始等待时间    单位是毫秒
+          multiplier: 3  # 后面等待时间是 mul*initial
+          max-attempts: 4  #最大重试次数
+
+
+  # 默认 dev 环境
+  profiles:
+    active: dev
+  # 支持 swagger3
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  # session 配置
+  session:
+    # todo 取消注释开启分布式 session（须先配置 Redis）
+    # store-type: redis
+    # 30 天过期
+    timeout: 2592000
+  # 数据库配置
+  # todo 需替换配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://sh-cynosdbmysql-grp-ioc2c5yu.sql.tencentcdb.com:27195/iot_api
+    username: xiancai
+    password: zGpBWzbbb8A4Ekdb
+  # Redis 配置
+  # todo 需替换配置，然后取消注释
+  redis:
+    host: r-m5e0adwqarpi0gv2h2pd.redis.rds.aliyuncs.com
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+    password: Wjk5377197
+  # Elasticsearch 配置
+  # todo 需替换配置，然后取消注释
+  #  elasticsearch:
+  #    uris: http://localhost:9200
+  #    username: root
+  #    password: 123456
+  # 文件上传
+  servlet:
+    multipart:
+      # 大小限制
+      max-file-size: 10MB
+  cloud:
+    nacos:
+      server-addr: 124.221.8.81:8848   #nacos服务端地址
+      discovery:
+        cluster-name: SH # 集群名称，这里的明治可以随便取
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+      web-context-unify: false   #关闭上下文整合，不关闭的话，会认为所有controller里面的链路都有一个根链路
+
+    openfeign:
+      client:
+        config:
+          default:
+            connectTimeout: 5000
+            readTimeout: 5000
+            loggerLevel: basic
+server:
+  address: 0.0.0.0
+  port: 8105
+  servlet:
+    context-path: /api/decider
+    # cookie 30 天过期
+    session:
+      cookie:
+        max-age: 2592000
+#   先开启包的debug日志级别，feign的日志才可以生效
+logging:
+  level:
+    com:
+      mayphyr:
+        iotdecider: debug #com.cloud为包路径
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: basic
+  httpclient:
+    max-connections-per-route: 50 #单个路径的最大连接数
+    enabled: true  #支持httpClient的开关
+    max-connections: 200  #最大连接数
+  sentinel:
+    enabled: true   #开启feign对sentinel
+#logging:
+#  level:
+#    feign: trace
+sunapi:
+  client:
+    access-key:
+    secret-key:

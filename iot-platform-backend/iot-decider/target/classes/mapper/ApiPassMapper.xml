@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mayphyr.iotdecider.mapper.ApiPassMapper">
+
+    <resultMap id="BaseResultMap" type="com.mayphyr.iotcommon.model.entity.ApiPass">
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="accessKey" column="access_key" jdbcType="VARCHAR"/>
+            <result property="secretKey" column="secret_key" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        user_id,access_key,secret_key
+    </sql>
+</mapper>

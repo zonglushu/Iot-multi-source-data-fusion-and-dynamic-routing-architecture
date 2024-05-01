@@ -1,0 +1,5 @@
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-gateway/src/main/java/com/mayphyr/iotgateway/filter/ApiGlobalFilter.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-gateway/src/main/java/com/mayphyr/iotgateway/filter/AuthorizeFilter.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-gateway/src/main/java/com/mayphyr/iotgateway/FeignConfig.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-gateway/src/main/java/com/mayphyr/iotgateway/utils/ResponseHandler.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-gateway/src/main/java/com/mayphyr/iotgateway/IotGatewayApplication.java

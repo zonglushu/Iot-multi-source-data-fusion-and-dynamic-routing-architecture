@@ -1,0 +1,7 @@
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-feign/src/main/java/com/mayphyr/iotfeign/config/DefaultFeignConfig.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-feign/src/main/java/com/mayphyr/iotfeign/rpc/UserClient.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-feign/src/main/java/com/mayphyr/iotfeign/IotFeignApplication.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-feign/src/main/java/com/mayphyr/iotfeign/fallback/UserClientFallbackFactory.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-feign/src/main/java/com/mayphyr/iotfeign/config/FeignConfig.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-feign/src/main/java/com/mayphyr/iotfeign/rpc/agrculture/NodeClient.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-feign/src/main/java/com/mayphyr/iotfeign/fallback/agrculture/NodeClientFallbackFactory.java

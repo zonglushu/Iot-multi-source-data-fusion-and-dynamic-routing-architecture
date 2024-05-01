@@ -1,0 +1,24 @@
+{
+  "groups": [
+    {
+      "name": "sunapi.client",
+      "type": "com.mayphyr.iotapiclientsdk.config.SunApiClientConfig",
+      "sourceType": "com.mayphyr.iotapiclientsdk.config.SunApiClientConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "sunapi.client.access-key",
+      "type": "java.lang.String",
+      "description": "访问密钥",
+      "sourceType": "com.mayphyr.iotapiclientsdk.config.SunApiClientConfig"
+    },
+    {
+      "name": "sunapi.client.secret-key",
+      "type": "java.lang.String",
+      "description": "校验密钥",
+      "sourceType": "com.mayphyr.iotapiclientsdk.config.SunApiClientConfig"
+    }
+  ],
+  "hints": []
+}

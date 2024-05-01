@@ -1,0 +1,44 @@
+{
+  "groups": [
+    {
+      "name": "mqtt",
+      "type": "com.mayphyr.iotreception.mqtt.publish.properties.MqttProperties",
+      "sourceType": "com.mayphyr.iotreception.mqtt.publish.properties.MqttProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "mqtt.broker-url",
+      "type": "java.lang.String",
+      "sourceType": "com.mayphyr.iotreception.mqtt.publish.properties.MqttProperties"
+    },
+    {
+      "name": "mqtt.client-id",
+      "type": "java.lang.String",
+      "sourceType": "com.mayphyr.iotreception.mqtt.publish.properties.MqttProperties"
+    },
+    {
+      "name": "mqtt.hard-topic",
+      "type": "java.lang.String",
+      "description": "硬件向Java客户端发布的主题",
+      "sourceType": "com.mayphyr.iotreception.mqtt.publish.properties.MqttProperties"
+    },
+    {
+      "name": "mqtt.password",
+      "type": "java.lang.String",
+      "sourceType": "com.mayphyr.iotreception.mqtt.publish.properties.MqttProperties"
+    },
+    {
+      "name": "mqtt.username",
+      "type": "java.lang.String",
+      "sourceType": "com.mayphyr.iotreception.mqtt.publish.properties.MqttProperties"
+    },
+    {
+      "name": "mqtt.web-topic",
+      "type": "java.lang.String",
+      "description": "Java客户端向硬件发布的主题",
+      "sourceType": "com.mayphyr.iotreception.mqtt.publish.properties.MqttProperties"
+    }
+  ],
+  "hints": []
+}

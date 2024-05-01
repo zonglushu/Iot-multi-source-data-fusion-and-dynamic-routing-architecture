@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiancai.lora.mapper.CostMapper">
+
+    <resultMap id="BaseResultMap" type="com.xiancai.lora.model.entity.Cost">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="mode" column="mode" jdbcType="VARCHAR"/>
+            <result property="usage" column="useage" jdbcType="VARCHAR"/>
+            <result property="amount" column="amount" jdbcType="INTEGER"/>
+            <result property="balance" column="balance" jdbcType="INTEGER"/>
+            <result property="costTime" column="cost_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,mode,
+        useage,amount,balance,
+        cost_time
+    </sql>
+    <select id="searchByTime" resultType="com.xiancai.lora.model.entity.Cost">
+        select * from cost where user_id =#{userId} and cost_time between #{start} and #{end}
+    </select>
+</mapper>

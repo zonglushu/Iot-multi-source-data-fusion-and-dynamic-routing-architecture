@@ -1,0 +1,7 @@
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-bi/src/main/java/com/mayphyr/iotbi/controller/FileController.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-bi/src/main/java/com/mayphyr/iotbi/entity/ss.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-bi/src/main/java/com/mayphyr/iotbi/entity/dto/chart/GenChartByAiRequest.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-bi/src/main/java/com/mayphyr/iotbi/entity/dto/UploadFileRequest.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-bi/src/main/java/com/mayphyr/iotbi/manger/AIManger.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-bi/src/main/java/com/mayphyr/iotbi/entity/vo/BIResponse.java
+/Users/mayphyr/code/IoTAPIPlatform/iot-platform-backend/iot-bi/src/main/java/com/mayphyr/iotbi/IotBiApplication.java

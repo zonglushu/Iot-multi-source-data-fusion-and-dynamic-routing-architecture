@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://sh-cynosdbmysql-grp-ioc2c5yu.sql.tencentcdb.com:27195/lora
+    username: xiancai
+    password: zGpBWzbbb8A4Ekdb

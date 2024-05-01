@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mayphyr.iotdecider.mapper.InterfaceUserMapper">
+
+
+    <resultMap id="BaseResultMap" type="com.mayphyr.iotcommon.model.entity.InterfaceUser">
+        <id property="interfaceId" column="interface_id" jdbcType="BIGINT"/>
+        <result property="userId" column="user_id" jdbcType="BIGINT"/>
+        <result property="count" column="count" jdbcType="BIGINT"/>
+    </resultMap>
+
+<!--    动态创建interface_user_+userId表-->
+    <sql id="createTableSQL">
+        CREATE TABLE IF NOT EXISTS ${tableName}
+        (
+            interface_id
+            BIGINT
+            PRIMARY
+            KEY,
+            user_id
+            BIGINT,
+            count
+            BIGINT
+            )
+    </sql>
+<!--     将 interface_user_+ interfaceId作为表名，并将结果传给 tableName变量，-->
+<!--     然后又因为，在创建表的sql中，又一个变量是tableName，而我们这刚好又一个tableName的变量-->
+<!--     所以就直接匹配上了-->
+    <insert id="createInterUserDynamicTable">
+        <selectKey keyProperty="tableName" resultType="java.lang.String">
+            SELECT CONCAT('interface_user_', #{interfaceId}) AS tableName
+        </selectKey>
+        ${createTableSQL}
+    </insert>
+
+    <select id="hasRemainCount" parameterType="java.lang.Long" resultType="com.mayphyr.iotcommon.model.entity.InterfaceUser">
+        select * from interface_user_${interfaceId} where interface_id=#{interfaceId} and user_id = #{userId}
+    </select>
+
+<!--    插入一条数据，并且参数是InterfaceUser类型的对象，他会自动将对象的属性值解析出-->
+    <insert id="insertRecord" parameterType="com.mayphyr.iotcommon.model.entity.InterfaceUser" >
+        INSERT INTO ${tableName} (interface_id, user_id, count)
+        VALUES (#{interfaceId}, #{userId}, #{count})
+    </insert>
+
+
+<!--更新接口的使用次数。-->
+    <update id="updateCount" parameterType="java.lang.Long">
+       update interface_user_${interfaceId}
+        set count=count-1
+        where interface_id = #{interfaceId}
+        and user_id = #{userId}
+    </update>
+
+
+
+
+
+
+<!--    <insert id="saveOrUpdate" parameterType="com.mayphyr.iotcommon.model.entity.InterfaceUser">-->
+<!--        <selectKey keyProperty="id" resultType="Long" order="BEFORE">-->
+<!--            SELECT COALESCE((SELECT id FROM ${tableName} WHERE id = #{id}), 0)-->
+<!--        </selectKey>-->
+<!--        <if test="id != null and id > 0">-->
+<!--            UPDATE ${tableName} SET-->
+<!--            name = #{name},-->
+<!--            age = #{age},-->
+<!--            email = #{email}-->
+<!--            WHERE id = #{id}-->
+<!--        </if>-->
+
+
+<!--        <if test="id == null or id>0">-->
+<!--            INSERT INTO your_table (name, age, email)-->
+<!--            VALUES (#{name}, #{age}, #{email})-->
+<!--        </if>-->
+<!--    </insert>-->
+
+
+
+
+
+</mapper>

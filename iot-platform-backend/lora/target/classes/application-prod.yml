@@ -1,0 +1,30 @@
+spring:
+  main:
+    allow-circular-references: true  #允许循环引用
+  # DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://sh-cynosdbmysql-grp-ioc2c5yu.sql.tencentcdb.com:27195/lora
+    username: xiancai
+    password: zGpBWzbbb8A4Ekdb
+  redis:
+    host: r-m5e0adwqarpi0gv2h2pd.redis.rds.aliyuncs.com
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+    password: Wjk5377197
+mybatis-plus:
+  configuration:
+#    map-underscore-to-camel-case: true 默认也是开启的，会自动将下划线转为驼峰
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mqtt:
+  broker-url: tcp://124.223.84.253:1883
+  username: PURESUN2
+  client-id: PURESUN2
+  password: 123456
+  web-topic: sms_sub
+  hard-topic: sms_pub

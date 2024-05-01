@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: iot-es
+  # ?? dev ??
+  profiles:
+    active: dev
+  elasticsearch:
+    uris: http://124.221.8.81:9200
+  rabbitmq:
+    host: 124.221.8.81
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+    publisher-confirm-type: correlated  #???????ConfirmCallback,mq??????????ConfirmCallback
+    publisher-returns: true
+    template:
+      mandatory: true   # ????????????????true ??? ReturnCallback , false ???????
+
+server:
+  address: 0.0.0.0
+  port: 8203
+  servlet:
+    context-path: /api
+    # cookie 30 ???
+    session:
+      cookie:
+        max-age: 2592000

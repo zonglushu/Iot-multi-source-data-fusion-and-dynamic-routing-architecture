@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: iot-usercenter
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 124.221.8.81:8848   #nacos服务端地址
+      config:
+        file-extension: yaml    #文件后缀名
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+      web-context-unify: false   #关闭上下文整合，不关闭的话，会认为所有controller里面的链路都有一个根链路，
